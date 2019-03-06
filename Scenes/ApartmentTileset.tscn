@@ -1,0 +1,362 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Floor.Basic.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Wall.Basic.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Wall_Left.Bottom.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.30.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.31.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.32.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.20.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.21.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.22.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.10.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.11.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.12.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.00.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.01.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.02.png" type="Texture" id=15]
+
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3.99743, 4.00043 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3.99818, 4.02133 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1.49051, 4.01429 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1.52976, 4.00023 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1.51358, 4.00534 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1.49686, 4.01188 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.00644, 3.98866 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3.99294, 3.99301 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.02513, 4.02804 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3.94565, 4.05706 )
+
+[node name="ApartmentTileset" type="Node"]
+
+[node name="FloorBasic" type="Sprite" parent="." index="0"]
+
+position = Vector2( 10, 10 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Region" ]
+
+[node name="WallBasic" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 20, 10 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallBasic" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallBasic/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="WallBorderSides" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 30, 10 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallBorderSides" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallBorderSides/StaticBody2D" index="0"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="WallBorderTop" type="Sprite" parent="." index="3"]
+
+position = Vector2( 40, 10 )
+rotation = 1.5708
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="BackDoor (3,0)" type="Sprite" parent="." index="4"]
+
+position = Vector2( 40, 10 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="BackDoor (3,1)" type="Sprite" parent="." index="5"]
+
+position = Vector2( 50, 10 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="BackDoor (3,2)" type="Sprite" parent="." index="6"]
+
+position = Vector2( 60, 10 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="BackDoor (2,0)" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 70, 10 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BackDoor (2,0)" index="0"]
+
+position = Vector2( -0.0224686, 0 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackDoor (2,0)/StaticBody2D" index="0"]
+
+position = Vector2( -2.50036, 0 )
+shape = SubResource( 5 )
+
+[node name="BackDoor (2,1)" type="Sprite" parent="." index="8"]
+
+position = Vector2( 80, 10 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BackDoor (2,2)" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 90, 10 )
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BackDoor (2,2)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackDoor (2,2)/StaticBody2D" index="0"]
+
+position = Vector2( 2.47868, 0 )
+shape = SubResource( 6 )
+
+[node name="BackDoor (1,0)" type="Sprite" parent="." index="10"]
+
+editor/display_folded = true
+position = Vector2( 100, 10 )
+texture = ExtResource( 10 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BackDoor (1,0)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackDoor (1,0)/StaticBody2D" index="0"]
+
+position = Vector2( -2.49037, 0 )
+shape = SubResource( 7 )
+
+[node name="BackDoor (1,1)" type="Sprite" parent="." index="11"]
+
+position = Vector2( 110, 10 )
+texture = ExtResource( 11 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+
+[node name="BackDoor (1,2)" type="Sprite" parent="." index="12"]
+
+editor/display_folded = true
+position = Vector2( 120, 10 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BackDoor (1,2)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackDoor (1,2)/StaticBody2D" index="0"]
+
+position = Vector2( 2.50722, 0.00222588 )
+shape = SubResource( 8 )
+
+[node name="BackDoor (0,0)" type="Sprite" parent="." index="13"]
+
+editor/display_folded = true
+position = Vector2( 130, 10 )
+texture = ExtResource( 13 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BackDoor (0,0)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackDoor (0,0)/StaticBody2D" index="0"]
+
+shape = SubResource( 9 )
+
+[node name="BackDoor (0,1)" type="Sprite" parent="." index="14"]
+
+editor/display_folded = true
+position = Vector2( 140, 10 )
+texture = ExtResource( 14 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BackDoor (0,1)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackDoor (0,1)/StaticBody2D" index="0"]
+
+shape = SubResource( 10 )
+
+[node name="BackDoor (0,2)" type="Sprite" parent="." index="15"]
+
+editor/display_folded = true
+position = Vector2( 150, 10 )
+texture = ExtResource( 15 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BackDoor (0,2)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackDoor (0,2)/StaticBody2D" index="0"]
+
+shape = SubResource( 11 )
+
+[node name="Border" type="Sprite" parent="." index="16"]
+
+position = Vector2( 160, 10 )
+texture = ExtResource( 11 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Border" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D" index="0"]
+
+shape = SubResource( 12 )
+_sections_unfolded = [ "Transform" ]
+
+

@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Dave.Walking.Right_1.png-015b5970d904c50334760b799c5d8d27.stex"
+
+[deps]
+
+source_file="res://Sprites/Dave Sprites/Dave.Walking.Right_1.png"
+dest_files=[ "res://.import/Dave.Walking.Right_1.png-015b5970d904c50334760b799c5d8d27.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Bedroom1.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/WashingMachineMinigame.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Apartment.tres" type="TileSet" id=3]
+[ext_resource path="res://Sprites/Bedroom Tileset/Tileset.Apartment.Door_Back.11.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/WashingMachine.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Baby.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 35.7134, 33.5296 )
+
+[node name="Bedroom1" type="Node2D"]
+
+position = Vector2( 210, 20 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause", "Transform" ]
+
+[node name="WashingMachineMinigame" parent="." index="0" instance=ExtResource( 2 )]
+
+pause_mode = 2
+_sections_unfolded = [ "Pause" ]
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+
+position = Vector2( -69.7854, -1.90735e-006 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -196625, 16, 0, -196624, 1, 0, -196623, 1, 0, -196622, 1, 0, -196621, 1, 0, -196620, 1, 0, -196619, 1, 0, -196618, 1, 0, -196617, 1, 0, -196616, 1, 0, -196615, 1, 0, -196614, 1, 0, -196613, 1, 0, -196612, 16, 0, -131089, 16, 0, -131088, -1610612735, 0, -131087, -1610612735, 0, -131086, -1610612735, 0, -131085, -1610612735, 0, -131084, -1610612735, 0, -131083, -1610612735, 0, -131082, -1610612735, 0, -131081, -1610612735, 0, -131080, 13, 0, -131079, 14, 0, -131078, 15, 0, -131077, -1610612735, 0, -131076, 16, 0, -65553, 16, 0, -65552, -1610612735, 0, -65551, -1610612735, 0, -65550, -1610612735, 0, -65549, -1610612735, 0, -65548, -1610612735, 0, -65547, -1610612735, 0, -65546, -1610612735, 0, -65545, -1610612735, 0, -65544, 10, 0, -65543, 11, 0, -65542, 12, 0, -65541, -1610612735, 0, -65540, 16, 0, -17, 16, 0, -16, -1610612733, 0, -15, -1610612733, 0, -14, -1610612733, 0, -13, -1610612733, 0, -12, -1610612733, 0, -11, -1610612733, 0, -10, -1610612733, 0, -9, -1610612733, 0, -8, 4, 0, -7, 5, 0, -6, 6, 0, -5, -1610612733, 0, -4, 16, 0, 65519, 16, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 16, 0, 131055, 16, 0, 131056, 0, 0, 131057, 0, 0, 131058, 0, 0, 131059, 0, 0, 131060, 0, 0, 131061, 0, 0, 131062, 0, 0, 131063, 0, 0, 131064, 0, 0, 131065, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 16, 0, 196591, 16, 0, 196592, 0, 0, 196593, 0, 0, 196594, 0, 0, 196595, 0, 0, 196596, 0, 0, 196597, 0, 0, 196598, 0, 0, 196599, 0, 0, 196600, 0, 0, 196601, 0, 0, 196602, 0, 0, 196603, 0, 0, 196604, 16, 0, 262127, 16, 0, 262128, 0, 0, 262129, 0, 0, 262130, 0, 0, 262131, 0, 0, 262132, 0, 0, 262133, 0, 0, 262134, 0, 0, 262135, 0, 0, 262136, 0, 0, 262137, 0, 0, 262138, 0, 0, 262139, 0, 0, 262140, 16, 0, 327663, 16, 0, 327664, 0, 0, 327665, 0, 0, 327666, 0, 0, 327667, 0, 0, 327668, 0, 0, 327669, 0, 0, 327670, 0, 0, 327671, 0, 0, 327672, 0, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 16, 0, 393199, 16, 0, 393200, 0, 0, 393201, 0, 0, 393202, 0, 0, 393203, 0, 0, 393204, 0, 0, 393205, 0, 0, 393206, 0, 0, 393207, 0, 0, 393208, 0, 0, 393209, 0, 0, 393210, 0, 0, 393211, 0, 0, 393212, 16, 0, 458735, 16, 0, 458736, 16, 0, 458737, 16, 0, 458738, 16, 0, 458739, 16, 0, 458740, 16, 0, 458741, 16, 0, 458742, 16, 0, 458743, 16, 0, 458744, 16, 0, 458745, 16, 0, 458746, 16, 0, 458747, 16, 0, 458748, 16, 0 )
+
+[node name="Bedroom12Kitchen" type="StaticBody2D" parent="." index="2"]
+
+position = Vector2( -121.79, -17.5653 )
+scale = Vector2( 0.25, 0.1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="Bedroom12Kitchen" index="0"]
+
+position = Vector2( -0.19556, -5.6002 )
+scale = Vector2( 8.97724, 7.21969 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bedroom12Kitchen" index="1"]
+
+position = Vector2( 0, -5.49429 )
+scale = Vector2( 1, 0.849594 )
+shape = SubResource( 1 )
+
+[node name="WashingMachine" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( -186, -5 )
+
+[node name="Player" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( -149.091, 22.3777 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="LoadPosition" type="Position2D" parent="." index="5"]
+
+position = Vector2( -121.955, -2.1567 )
+
+[node name="Baby" parent="." index="6" instance=ExtResource( 7 )]
+
+position = Vector2( -183.325, 27.4405 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="InMinigame" from="." to="Player" method="_on_Node2D_InMinigame"]
+
+[connection signal="minigame_stop" from="WashingMachineMinigame" to="." method="_on_WashingMachineMinigame_minigame_stop"]
+
+[connection signal="Action" from="Player" to="." method="_on_Player_Action"]
+
+[connection signal="Bedroom12Kitchen" from="Player" to="." method="_on_Player_Bedroom12Kitchen"]
+
+
